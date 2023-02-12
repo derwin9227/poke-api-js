@@ -37,8 +37,13 @@ h2{
 .name {
     font-family: Helvetica;
 }
+.name::first-letter{
+    text-transform: capitalize;
+}
 input{
     width: 3em;
-    border-radius: 5px;
-    
+    border-radius: 5px;   
+}
+li::first-letter{
+    text-transform: capitalize;
 }

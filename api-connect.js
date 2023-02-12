@@ -3,13 +3,12 @@ function buscarPokemon(id){
       fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then(response => response.json())
             .then(pokeDatos => {
-              let firstLetterName = pokeDatos.species.name.charAt().toUpperCase();
                 document.querySelector(".container").innerHTML =`<div class="card">
                   <div class="photo">
                     <img src="${pokeDatos.sprites.front_default}" alt="">
                   </div>
                   </div>
-                  <h2 class="name">${pokeDatos.species.name.replace(pokeDatos.species.name.charAt(),firstLetterName)}</h2>
+                  <h2 class="name">${pokeDatos.species.name}</h2>
               <h2>Attacks</h2>
                   <ul>
                     <li>${pokeDatos.moves[0].move.name}</li>
